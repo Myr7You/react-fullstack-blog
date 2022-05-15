@@ -67,6 +67,12 @@
   margin-top: 20px;
   font-size: 16px;
   font-weight: 500;
+  cursor: pointer;
+}
+
+.loginBtn:disabled{
+  background-color: grey;
+  cursor: not-allowed;
 }
 
 .registerBtn{

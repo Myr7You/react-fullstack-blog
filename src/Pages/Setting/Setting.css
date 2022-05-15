@@ -47,6 +47,16 @@
   flex-direction: column;
 }
 
+.settingsForm input:focus{
+  outline: none;
+  color: #333;
+}
+
+.settingsForm input{
+  font-size: 18px;
+  color: #666;
+}
+
 .settingsPPIcon{
   width: 25px;
   height: 25px;

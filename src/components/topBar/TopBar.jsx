@@ -1,7 +1,16 @@
 import "./TopBar.css"
 import { Link } from "react-router-dom";
+import { useSelector,useDispatch } from 'react-redux';
+import { logout } from '../../store/auth';
+
 const TopBar = () => {
-  const user = false;
+  const PF = 'http://localhost:5000/images/';
+  const dispatch = useDispatch();
+  const user = useSelector(state => state.login.user);
+
+  const handleLogout = () => {
+    dispatch(logout());
+  }
   return (
     <div className="top">
       <div className="topLeft">
@@ -33,20 +42,28 @@ const TopBar = () => {
               WRITE
             </Link>
           </li>
-          {user ? (<li className="topListItem">
-            <Link className="link" to="/login">
+          {user ? (
+            <li className="topListItem" onClick={handleLogout}>
               LOGOUT
-            </Link>
-          </li>) : null}
+            </li>
+          ) : null}
         </ul>
       </div>
       <div className="topRight">
         {user ? (
-          <img
-            src="https://images.pexels.com/photos/6765625/pexels-photo-6765625.jpeg?cs=srgb&dl=pexels-michelle-leman-6765625.jpg&fm=jpg"
-            className="topImg"
-            alt="profile"
-          />
+          <Link className="link" to="/setting">
+            <img
+              src={
+                user.profilePic
+                  ? user.profilePic.includes('http')
+                    ? user.profilePic
+                    : PF + user.profilePic
+                  : 'https://res.cloudinary.com/dq8qhdgox/image/upload/v1652339532/common/user_mfoimf.png'
+              }
+              className="topImg"
+              alt="profile"
+            />
+          </Link>
         ) : (
           <ul className="topList">
             <li className="topListItem">

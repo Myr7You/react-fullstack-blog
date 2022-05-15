@@ -9,8 +9,11 @@ import Setting from './Pages/Setting/Setting';
 import PostDetail from './Pages/PostDetail/PostDetail';
 import Write from './Pages/Write/Write';
 import "./App.css"
+
+import { useSelector } from 'react-redux';
 function App() {
-  const user = false;
+  
+  const user = useSelector(state => state.login.user);
   return (
     <div className="App">
       <TopBar />
@@ -19,7 +22,7 @@ function App() {
 
         <Route path="/write" element={user ? <Write /> : <Login />} />
         <Route path="/setting" element={user ? <Setting /> : <Login />} />
-        <Route path="/postDetail/:postId" element={<PostDetail />} />
+        <Route path="/post/:postId" element={<PostDetail />} />
 
         <Route path="/login" element={user ? <Home /> : <Login />} />
         <Route path="/register" element={user ? <Home /> : <Register />} />
