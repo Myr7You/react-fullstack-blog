@@ -18,7 +18,7 @@ function App() {
     <div className="App">
       <TopBar />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/react-fullstack-blog" element={<Home />} />
 
         <Route path="/write" element={user ? <Write /> : <Login />} />
         <Route path="/setting" element={user ? <Setting /> : <Login />} />

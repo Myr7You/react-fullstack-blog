@@ -52,7 +52,7 @@ const SinglePost = () => {
         }
       });
       //here is delete method not post method, infos must be wrapped with data:{}
-      window.location.replace('/');
+      window.location.replace('/react-fullstack-blog');
     } catch (error) {
       console.log(error);
     }

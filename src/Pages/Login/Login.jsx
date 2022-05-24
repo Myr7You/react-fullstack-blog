@@ -25,7 +25,7 @@ const Login = () => {
       if (res.status === 200) {
         dispatch(login(res.data));
         setIsFetching(false);
-        navigate("/")
+        navigate('/react-fullstack-blog');
       }
     } catch (error) {
       dispatch(loginFailure());
