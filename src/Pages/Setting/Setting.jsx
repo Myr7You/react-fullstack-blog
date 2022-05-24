@@ -28,7 +28,7 @@ const Setting = () => {
      data.append('file', file);
      updateUser.profilePic = filename;
      try {
-       await axios.post(process.env.REACT_APP_API + '/upload', data);
+       await axios.post(`${process.env.REACT_APP_API}/upload`, data);
      } catch (error) {
        console.log(error);
      }

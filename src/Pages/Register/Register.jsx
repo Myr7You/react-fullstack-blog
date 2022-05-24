@@ -13,7 +13,7 @@ const Register = () => {
     serError(false);
     try {
       const res = await axios.post(
-        process.env.REACT_APP_API + '/auth/register',
+        `${process.env.REACT_APP_API}/auth/register`,
         {
           username,
           password,

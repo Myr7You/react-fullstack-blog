@@ -23,7 +23,7 @@ const TopBar = () => {
       <div className="topCenter">
         <ul className="topList">
           <li className="topListItem">
-            <Link className="link" to="/">
+            <Link className="link" to="/react-fullstack-blog/">
               HOME
             </Link>
           </li>
