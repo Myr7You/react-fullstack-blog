@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/react-fullstack-blog/static/css/main.45fccefb.css",
-    "main.js": "/react-fullstack-blog/static/js/main.faed11de.js",
+    "main.js": "/react-fullstack-blog/static/js/main.b1e57952.js",
     "index.html": "/react-fullstack-blog/index.html",
     "main.45fccefb.css.map": "/react-fullstack-blog/static/css/main.45fccefb.css.map",
-    "main.faed11de.js.map": "/react-fullstack-blog/static/js/main.faed11de.js.map"
+    "main.b1e57952.js.map": "/react-fullstack-blog/static/js/main.b1e57952.js.map"
   },
   "entrypoints": [
     "static/css/main.45fccefb.css",
-    "static/js/main.faed11de.js"
+    "static/js/main.b1e57952.js"
   ]
 }
