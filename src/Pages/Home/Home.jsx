@@ -16,7 +16,7 @@ const Home = () => {
   console.log(isLogin);
   useEffect(() => {
     const fetchPosts = async () => {
-      const res = await axios.get('/posts' + search);
+      const res = await axios.get(process.env.REACT_APP_API + '/posts' + search);
       if (res.status === 200) {
         setPosts(res.data);
       }
