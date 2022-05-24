@@ -10,7 +10,7 @@ const Sidebar = () => {
 
   useEffect(() => {
     const fetchCates = async () => {
-      const res = await axios.get('/categories')
+      const res = await axios.get(`${process.env.REACT_APP_API}/categories`);
       if(res.status === 200) {
         setCates(res.data)
       };

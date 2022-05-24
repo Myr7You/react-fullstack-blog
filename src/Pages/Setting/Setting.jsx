@@ -28,13 +28,16 @@ const Setting = () => {
      data.append('file', file);
      updateUser.profilePic = filename;
      try {
-       await axios.post('/upload', data);
+       await axios.post(process.env.REACT_APP_API + '/upload', data);
      } catch (error) {
        console.log(error);
      }
    }
    try {
-     const res = await axios.put(`/users/${user._id}`, updateUser);
+     const res = await axios.put(
+       `${process.env.REACT_APP_API}/users/${user._id}`,
+       updateUser
+     );
      console.log(res);
      if(res.status === 200){
        setSuccess(true)

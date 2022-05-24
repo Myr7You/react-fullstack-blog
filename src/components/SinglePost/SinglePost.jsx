@@ -18,11 +18,14 @@ const SinglePost = () => {
 
   const handleUpdate = async() => {
     try {
-      const res = await axios.put(`/posts/${postId}`,{
-        username:user.username,
-        title,
-        desc,
-      });
+      const res = await axios.put(
+        `${process.env.REACT_APP_API}/posts/${postId}`,
+        {
+          username: user.username,
+          title,
+          desc
+        }
+      );
       if(res.status === 200){
         setUpdateMode(false)
       }
@@ -33,7 +36,9 @@ const SinglePost = () => {
   
   useEffect(() => {
     const getPost = async () => {
-      const res = await axios.get(`/posts/${postId}`);
+      const res = await axios.get(
+        `${process.env.REACT_APP_API}/posts/${postId}`
+      );
       if(res.status === 200) {
         setPost(res.data)
         setTitle(res.data.title);
@@ -46,7 +51,7 @@ const SinglePost = () => {
   console.log(PF + post.photo);
   const handleDelete = async () => {
     try {
-      await axios.delete(`/posts/${postId}`, {
+      await axios.delete(`${process.env.REACT_APP_API}/posts/${postId}`, {
         data: {
           username: user.username
         }

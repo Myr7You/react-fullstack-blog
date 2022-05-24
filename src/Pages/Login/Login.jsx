@@ -18,7 +18,7 @@ const Login = () => {
     e.preventDefault();
     setIsFetching(true);
     try {
-      const res = await axios.post('/auth/login', {
+      const res = await axios.post(process.env.REACT_APP_API + '/auth/login', {
         username,
         password
       });

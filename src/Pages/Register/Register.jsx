@@ -12,11 +12,14 @@ const Register = () => {
     event.preventDefault();
     serError(false);
     try {
-      const res = await axios.post('/auth/register', {
-        username,
-        password,
-        email
-      });
+      const res = await axios.post(
+        process.env.REACT_APP_API + '/auth/register',
+        {
+          username,
+          password,
+          email
+        }
+      );
 
 
       if (res.status === 200) {
