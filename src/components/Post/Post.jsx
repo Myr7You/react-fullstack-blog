@@ -1,7 +1,7 @@
 import './Post.css';
 import {Link} from "react-router-dom"
 const Post = ({post}) => {
-  const PF = 'http://localhost:5000/images/';
+  const PF = `${process.env.REACT_APP_DOMAIN}/images/`;
   return (
     <div className="post">
       <img

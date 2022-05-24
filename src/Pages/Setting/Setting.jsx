@@ -5,7 +5,7 @@ import { updateLogin } from '../../store/auth';
 import { useState } from 'react';
 import axios from 'axios';
 const Setting = () => {
-  const PF = 'http://localhost:5000/images/';
+  const PF = `${process.env.REACT_APP_DOMAIN}/images/`;
   const dispatch = useDispatch();
   const user = useSelector(state => state.login.user);
   const [username, setUsername] = useState('');

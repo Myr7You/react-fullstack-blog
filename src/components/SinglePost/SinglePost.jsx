@@ -5,7 +5,7 @@ import axios from 'axios';
 import { useSelector } from 'react-redux';
 
 const SinglePost = () => {
-  const PF = 'http://localhost:5000/images/';
+  const PF = `${process.env.REACT_APP_DOMAIN}/images/`;
   
   const location = useLocation()
   const postId = location.pathname.split("/")[2]

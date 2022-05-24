@@ -4,7 +4,7 @@ import { useSelector,useDispatch } from 'react-redux';
 import { logout } from '../../store/auth';
 
 const TopBar = () => {
-  const PF = 'http://localhost:5000/images/';
+  const PF = `${process.env.REACT_APP_DOMAIN}/images/`;
   const dispatch = useDispatch();
   const user = useSelector(state => state.login.user);
 
