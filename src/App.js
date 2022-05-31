@@ -11,6 +11,8 @@ import Write from './Pages/Write/Write';
 import "./App.css"
 
 import { useSelector } from 'react-redux';
+import About from './Pages/About/About';
+import Contact from './Pages/Contact/Contact';
 function App() {
   
   const user = useSelector(state => state.login.user);
@@ -19,7 +21,8 @@ function App() {
       <TopBar />
       <Routes>
         <Route path="/react-fullstack-blog" element={<Home />} />
-
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="/write" element={user ? <Write /> : <Login />} />
         <Route path="/setting" element={user ? <Setting /> : <Login />} />
         <Route path="/post/:postId" element={<PostDetail />} />

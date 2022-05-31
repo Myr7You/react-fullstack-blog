@@ -1,17 +1,13 @@
 import './Header.css';
 
-const Header = () => {
+const Header = ({link,title,smTil}) => {
   return (
     <div className="header">
       <div className="headerTitles">
-        <span className="headerTitleSm">React & Node</span>
-        <span className="headerTitleLg">Blog</span>
+        {smTil && <span className="headerTitleSm">{smTil}</span>}
+        <span className="headerTitleLg">{title}</span>
       </div>
-      <img
-        className="headerImg"
-        src="https://images.pexels.com/photos/15286/pexels-photo.jpg?cs=srgb&dl=pexels-luis-del-r%C3%ADo-15286.jpg&fm=jpg"
-        alt=""
-      />
+      <img className={smTil ? 'headerImg' : 'headerImgX'} src={link} alt="" />
     </div>
   );
 }

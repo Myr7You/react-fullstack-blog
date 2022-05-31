@@ -43,6 +43,7 @@ const SinglePost = () => {
         setPost(res.data)
         setTitle(res.data.title);
         setDesc(res.data.desc);
+        console.log(res.data.desc);
       };
     }
     getPost()
@@ -120,10 +121,21 @@ const SinglePost = () => {
             onChange={e => setDesc(e.target.value)}
           ></textarea>
         ) : (
-          <p className="singlePostDesc">{post.desc}</p>
+          <p
+            className="singlePostDesc"
+            dangerouslySetInnerHTML={{
+              __html: post.desc && post.desc.replaceAll('\n', '<br />')
+            }}
+          >
+            {}
+          </p>
         )}
 
-        {updateMode && <button className='singlePostButton' onClick={handleUpdate}>Update</button> }
+        {updateMode && (
+          <button className="singlePostButton" onClick={handleUpdate}>
+            Update
+          </button>
+        )}
       </div>
     </div>
   );

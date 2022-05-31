@@ -1,0 +1,33 @@
+.about{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 50px;
+  
+}
+.aboutTitle{
+  width: 100%;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.aboutCtx{
+  padding: 10px 20px;
+  text-align: left;
+  align-self: start;
+}
+.aboutLink{
+  display: block;
+  margin-top: 20px;
+  font-size: 1.5rem;
+  color: teal;
+  font-weight: bold;
+}
+.aboutCtxEnd{
+  padding: 10px 20px;
+  margin-top: 50px;
+  text-align: left;
+  align-self: start;
+}

@@ -28,9 +28,13 @@ const Home = () => {
   
   return (
     <div>
-      <Header />
+      <Header
+        link="https://images.pexels.com/photos/15286/pexels-photo.jpg?cs=srgb&dl=pexels-luis-del-r%C3%ADo-15286.jpg&fm=jpg"
+        smTil="React & Node"
+        title="Blog"
+      />
       <div className="home">
-        <Posts posts={posts}/>
+        <Posts posts={posts} />
         <Sidebar />
       </div>
     </div>

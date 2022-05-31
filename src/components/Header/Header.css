@@ -31,3 +31,10 @@
   margin-top: 50px;
   object-fit: cover;
 }
+
+
+.headerImgX{
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
